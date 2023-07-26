@@ -1,0 +1,163 @@
+{% extends 'base.html' %}
+
+{% block nav %}
+<style>
+  h1{
+    color: yellow;
+  }
+  
+</style>
+
+<li><a href="{{ url_for('index') }}">Add detail </a></li>
+
+{% endblock %}
+
+{%  block content %}
+
+<section
+    
+class="bg-image"
+style="
+  background-image: url(https://wallpapers.com/images/hd/4k-bitcoin-c13kfpjbcteawl1z.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  
+">
+<br>
+<br>
+    <div class="container py-5"
+        
+    >
+    <br>
+    <br>
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="card mb-4">
+            <div class="card-body text-center">
+              <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp" alt="avatar"
+                class="rounded-circle img-fluid" style="width: 150px;">
+                
+              <h5 class="my-3"> Hello, {{ g.username }}</h5>
+            
+            </div>
+          </div>
+          <br>
+          
+
+          <div class="row">
+            <div class="col-md-6">
+              <div class="card mb-4 mb-md-0">
+                <div class="card-body">
+                  <h1 class="mb-4"><span class="text-primary font-italic me-1">Name of student</span> 
+                  </h1>
+                  {% for item in filehash %}
+                  
+                  <a class="mb-1" style="font-size: .91rem;" href="https://VASDoc.infura-ipfs.io/ipfs/{{ item }}" >{{ item }}</a>                 
+                 <br>
+                 
+
+                  <div class="progress rounded" style="height: 32px;">
+                    <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80"
+                      aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                  
+                  {% endfor %}
+              
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="card mb-4 mb-md-0">
+                <div class="card-body">
+                  <h1 class="mb-4"><span class="text-primary font-italic me-1">Parent name </span> 
+                  </h1>
+                  {% for item in to %}
+                  
+                  <p class="mb-1" style="font-size: .99rem;">{{item}}</p>
+                  
+                  <div class="progress rounded" style="height: 2px;">
+                    <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80"
+                      aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                  {% endfor %}
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="card mb-4 mb-md-0">
+                <div class="card-body">
+                  <h1 class="mb-4"><span class="text-primary font-italic me-1">Birthday</span> 
+                  </h1>
+                  {% for item in filename %}
+                  
+                  <p class="mb-1" style="font-size: .99rem;">{{ item }}</p>
+                  
+                  <div class="progress rounded" style="height: 2px;">
+                    <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80"
+                      aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                  {% endfor %}
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card mb-4 mb-md-0">
+                  <div class="card-body">
+                    <h1 class="mb-4"><span class="text-primary font-italic me-1">Address and city</span> 
+                    </h1>
+                    {% for item in feedback %}
+                    <p class="mb-1" style="font-size: .99rem;">{{ item }}</p>
+                    <div class="progress rounded" style="height: 2px;">
+                      <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80"
+                        aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    {% endfor %}
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="card mb-4 mb-md-0">
+                  <div class="card-body">
+                    <h1 class="mb-4"><span class="text-primary font-italic me-1">Phone</span> 
+                    </h1>
+                    {% for item in status %}
+                    <p class="mb-1" style="font-size: .99rem;">{{ item }}</p>
+                    <div class="progress rounded" style="height: 2px;">
+                      <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80"
+                        aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    {% endfor %}
+                  </div>
+                </div>
+              </div>
+              <!-- <div class="col-md-6">
+                <div class="card mb-4 mb-md-0">
+                  <div class="card-body">
+                    <h1 class="mb-4"><span class="text-primary font-italic me-1">Verify Sign</span> 
+                    </h1>
+                    {% for item in filehash %}
+                    <a class="mb-1" style="font-size: .99rem;" href="/Verify?filehash={{ item }}">verify</a>
+                    <div class="progress rounded" style="height: 32px;">
+                      <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80"
+                        aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    {% endfor %}
+                  </div>
+                </div>
+              </div> -->
+              
+          </div>
+          <br>
+<br>
+<br>
+<br>
+          
+        </div>
+      </div>
+      <br>
+<br>
+    </div>
+  </section>
+
+{% endblock %}

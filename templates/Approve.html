@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+
+{% block nav %}
+
+
+
+{% endblock %}
+
+{% block content %}
+
+<div
+class="bg-image"
+style="
+  background-image: url(https://i.pinimg.com/originals/82/6d/37/826d3747fa7dd9db257daa6910087b69.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+ 
+  "
+>
+
+<div class="container">
+
+<form method="POST">
+
+  <br>
+
+
+  <br>
+  <label class="form-label" for="form4Example3">Enter Students First and last name
+  </label>
+  <input type="text" name="sname">
+
+  <br>
+  <label class="form-label" for="form4Example3">Enter Students parent name
+  </label>
+  <input type="text" name="pname">
+  
+  <br>  
+ 
+    
+    
+  <label for="birthday">Birthday:</label>
+  <input type="date" id="birthday" name="bday">
+  <br>
+
+  <br>
+  <label class="form-label" for="form4Example3">Enter Students address and city
+  </label>
+  <input type="text" name="city">
+  
+  <br>
+  
+  <label class="form-label" for="form4Example3">Enter phone number
+  </label>
+  <input type="text" name="phone">
+  
+  <br>
+  
+  
+
+
+  <!-- <p>Click Approval if satisfied with the document</p>
+  <input type="radio" id="age1" name="Approve" value="Approve">
+  <label for="age1">Approve & Sign</label><br>
+  <input type="radio" id="age2" name="Approve" value="Not Approve">
+  <label for="age2">Not Approve</label><br>  
+  -->
+  <input type="submit" value="Submit">
+
+
+</form>
+</div>
+
+
+{% endblock %}
