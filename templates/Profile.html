@@ -51,16 +51,13 @@ style="
                 <div class="card-body">
                   <h1 class="mb-4"><span class="text-primary font-italic me-1">Name of student</span> 
                   </h1>
-                  {% for item in filehash %}
+                  {% for item in sname %}
                   
-                  <a class="mb-1" style="font-size: .91rem;" href="https://VASDoc.infura-ipfs.io/ipfs/{{ item }}" >{{ item }}</a>                 
-                 <br>
-                 
-
-                  <div class="progress rounded" style="height: 32px;">
-                    <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80"
-                      aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
+                  <p class="mb-1" style="font-size: .99rem;">{{ item }}</p>
+                    <div class="progress rounded" style="height: 2px;">
+                      <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80"
+                        aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
                   
                   {% endfor %}
               
@@ -72,7 +69,7 @@ style="
                 <div class="card-body">
                   <h1 class="mb-4"><span class="text-primary font-italic me-1">Parent name </span> 
                   </h1>
-                  {% for item in to %}
+                  {% for item in pname %}
                   
                   <p class="mb-1" style="font-size: .99rem;">{{item}}</p>
                   
@@ -89,7 +86,7 @@ style="
                 <div class="card-body">
                   <h1 class="mb-4"><span class="text-primary font-italic me-1">Birthday</span> 
                   </h1>
-                  {% for item in filename %}
+                  {% for item in bday %}
                   
                   <p class="mb-1" style="font-size: .99rem;">{{ item }}</p>
                   
@@ -106,7 +103,7 @@ style="
                   <div class="card-body">
                     <h1 class="mb-4"><span class="text-primary font-italic me-1">Address and city</span> 
                     </h1>
-                    {% for item in feedback %}
+                    {% for item in city %}
                     <p class="mb-1" style="font-size: .99rem;">{{ item }}</p>
                     <div class="progress rounded" style="height: 2px;">
                       <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80"
@@ -121,7 +118,7 @@ style="
                   <div class="card-body">
                     <h1 class="mb-4"><span class="text-primary font-italic me-1">Phone</span> 
                     </h1>
-                    {% for item in status %}
+                    {% for item in phone %}
                     <p class="mb-1" style="font-size: .99rem;">{{ item }}</p>
                     <div class="progress rounded" style="height: 2px;">
                       <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80"

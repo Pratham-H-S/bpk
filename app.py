@@ -65,7 +65,7 @@ app.config['UPLOAD_FOLDERR'] = 'F:/VasDoc/VASDoc/static/_files/'
 #         g.username = session["username"]
 
 
-@app.route('/')
+
 @app.route('/addDetails',methods = ['GET','POST'])
 def index():
     if request.method == 'POST' :
@@ -81,28 +81,28 @@ def index():
 
     return render_template("Approve.html")
 
-@app.route("/home")
+@app.route("/",methods = ['GET','POST'])
 # def home():
 #    return render_template("Profile.html")
 def home():
     files = []
-    filehash = []
-    filename =[]
-    to = []
-    feedback = []
-    status = []
+    sname = []
+    pname =[]
+    bday = []
+    city = []
+    phone = []
     filedata = db.userdata.find()
     print(filedata)
     # found = db.approve_file.find({"received_from":session['username']})
     for f in filedata:
         
-        filehash.append(f["sname"])
-        filename.append(f["pname"])
-        to.append(f["phone"])  
-        
+        sname.append(f["sname"])
+        pname.append(f["pname"])
+        bday.append(f["bday"])  
+        city.append(f["city"])
+        phone.append(f["phone"])
 
-
-    return render_template("Profile.html",filehash = filehash,filename = filename,to = to)
+    return render_template("Profile.html",sname = sname,pname = pname,bday = bday,city = city,phone = phone )
 
 
 # app.register_blueprint(File_upload,url_prefix = "")
